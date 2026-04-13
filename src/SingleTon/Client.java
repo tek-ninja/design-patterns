@@ -1,11 +1,12 @@
-import SingleTon.SingleTonsSerialization;
+package SingleTon;
 
 import java.io.*;
 
 
 public class Client {
     void main()  {
-        SingleTonsSerialization singleTonsSerialization = SingleTonsSerialization.getInstance();
+        //Using enum
+        SingleTon singleTonsSerialization = SingleTon.INSTANCE;
         try{
             ObjectOutputStream objectOutputStream = new ObjectOutputStream(new FileOutputStream("singleTon.obj"));
             objectOutputStream.writeObject(singleTonsSerialization);
@@ -16,7 +17,7 @@ public class Client {
        try{
            ObjectInputStream in = new ObjectInputStream(
                    new FileInputStream("singleton.obj"));
-           SingleTonsSerialization instance2 = (SingleTonsSerialization) in.readObject();
+           SingleTon instance2 = (SingleTon) in.readObject();
            // Compare instances
            System.out.println("Instance 1 hash: " + singleTonsSerialization.hashCode());
            System.out.println("Instance 2 hash: " + instance2.hashCode());
