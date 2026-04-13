@@ -1,5 +1,3 @@
-import SingleTon.BasicSingleTon;
-import SingleTon.BillPughSingleTon;
 import SingleTon.SynchronisedSingleTon;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
