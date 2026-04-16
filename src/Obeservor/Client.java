@@ -8,7 +8,5 @@ public class Client {
         stock.addObserver(new WebObserver());
 
         stock.setPrice(100);
-
-        stock.notifyObservers();
     }
 }
