@@ -15,14 +15,8 @@ public class PaymentService {
     3. ❌ Hard to Test & Extend  */
 
 
-    private PaymentFactory factory;
-
-    public PaymentService(PaymentFactory factory) {
-        this.factory = factory;
-    }
-
     public void processPayment(PaymentType paymentType) {
-        factory.payment(paymentType).pay();
+        PaymentFactory.getStrategy(paymentType).pay();
     }
 
 }

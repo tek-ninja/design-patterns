@@ -2,8 +2,7 @@ package Strategy;
 
 public class Client {
     void main(){
-        PaymentFactory paymentFactory = new PaymentFactory();
-        PaymentService paymentService = new PaymentService(paymentFactory);
+        PaymentService paymentService = new PaymentService();
         paymentService.processPayment(PaymentType.UPI);
     }
 }
